@@ -66,7 +66,7 @@ const Payment = ({ shippingData, backStep, nextStep }) => {
     currency: currencyNote,
     email: email,
     amount:  amountRaw  * 100,
-    publicKey: 'pk_test_df4d9852296923c3a8448629ca2705edaca2f803',
+    publicKey: process.env.REACT_APP_PAYSTACK_KEY,
     
   };
 
