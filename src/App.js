@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import store, { persistor }  from './Redux/store'
+import { Provider } from 'react-redux'
+import Checkout from "./pages/Checkout";
+import { PersistGate } from 'redux-persist/integration/react'
+import Details from "./pages/Details";
+import Categories from "./pages/Categories";
+import Receipt from "./pages/Receipt";
 
-function App() {
+
+
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/details/:prod_id" element={<Details/>} />
+        <Route path="/receipt" element={<Receipt/>} />
+        <Route path="/categories/:cat_id" element={<Categories/>} />
+      </Routes>
+    </BrowserRouter>
+      </PersistGate>
+    </Provider>
   );
-}
+};
 
 export default App;

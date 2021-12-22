@@ -1,0 +1,32 @@
+#details {
+   background-color: #f9f9f9;
+}
+
+#details #variant .owl-theme{
+    background-blend-mode: difference;
+    height: auto;
+    
+}
+
+#details #variant .owl-carousel .owl-item img {
+    width: fit-content;
+    height: 50vh;
+    object-fit: contain;
+}
+
+#details #variant .owl-theme .owl-nav {
+    color: blue;
+    font-size: 3rem;
+}
+#details #variant .owl-next {
+    display: block!important;
+    position: absolute;
+    top: 40%;
+    right: 0;
+}
+#details #variant .owl-prev {
+    display: block!important;
+    position: absolute;
+    top: 40%;
+    left: 0;
+}

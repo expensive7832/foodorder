@@ -1,0 +1,12 @@
+.topNotification{
+    background: linear-gradient(180deg, #008aff,#D5238A );
+    height: 20vh;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+

@@ -1,0 +1,7 @@
+#categorySingle{
+    margin: 0 1rem;
+}
+.MuiCardMedia-img {
+    object-fit: contain;
+    height: 100px;
+}
