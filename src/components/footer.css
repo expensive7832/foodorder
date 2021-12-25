@@ -1,6 +1,6 @@
 
 .topFooter{
-    background-color: #D5238A;
+    background-color: var(--green);
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-column-gap: 10px;
@@ -8,9 +8,9 @@
    
 }
 
-a{
+footer a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
  .bottomFooter{

@@ -1,13 +1,17 @@
-import { ListItemText, List, ListItem, Typography, Divider } from '@material-ui/core'
-import React from 'react'
+import { ListItemText, List, ListItem, Typography, Divider, CircularProgress, Box } from '@material-ui/core'
+import React, { useState } from 'react'
 import './review.css'
 
 
-const Review = ({products}) => {
+const Review = ({products, loading}) => {
+
+    
    
     return (
         <div id="review">
             <Typography gutterBottom align="center" variant="h5">Review</Typography>
+            {loading ? <Box style={{display: "flex", justifyContent: "center"}}> <CircularProgress /></Box> :
+            
             <List>
             {products?.line_items?.map((product) =>(
                 <div style={{display: "flex",justifyContent: "space-between", alignItems: "center"}}> 
@@ -20,6 +24,9 @@ const Review = ({products}) => {
              ))}
              
             </List>
+            
+            }
+            
             <Typography paragraph style={{fontWeight: '600'}}>Total: {products?.subtotal?.formatted_with_symbol}</Typography>
                 <Divider/>
         </div>

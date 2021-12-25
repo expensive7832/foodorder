@@ -9,63 +9,19 @@
     padding: 1rem 0;
   }
   
-  .littleAbout {
-    background: linear-gradient(180deg, #008aff, #ff137d), url("./../assets/new2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-blend-mode:multiply;
+  .littleAbout{
+    border: 2px solid var(--lightgray);
+  }
+  
+  .littleAbout img{
     width: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
-  }
-  .littleAbout .first {
-    width: 100%;
-  }
-  .littleAbout .first img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  .littleAbout .second{
-      display: flex;
-      align-items: start;
-      justify-content: center;
-      padding: 5rem;
-  }
-  
-  
-  .littleAbout .design{
-     color: #fff;
-  }
-  
-  .littleAbout blockquote{
-  color: #fff;
-  
-  }
-  .littleAbout .second img {
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
-  @media (max-width: 768px) {
-      .littleAbout .first {
-          text-align: center;
-        }
-  
-    .littleAbout{
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .littleAbout .second{
-        align-items: center;
-        flex-direction: column;
-    }
+    height: fit-content;
+    object-fit: cover;
   }
   
   .recentProducts{
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
   }
@@ -78,9 +34,6 @@
     }
   }
 
-  .ourService{
-      margin-top: 5rem;
-  }
   .ourService .content{
     padding: 0 10rem
   }
@@ -112,4 +65,20 @@
         grid-template-columns: repeat(1, 100%);
         grid-column-gap: 10px;
       }
+  }
+.recent .subscribe{
+  display: flex;
+  justify-content: center;
+  margin: 0 3rem;
+  width: 75%;
+}
+  .recent input{
+    padding: 1rem;
+     margin-bottom: 2rem;
+      width: 100%;
+    
+    border-width: 1px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
   }

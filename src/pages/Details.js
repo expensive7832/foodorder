@@ -50,7 +50,7 @@ const Details = () => {
       items: 1,
     },
     768: {
-      items: 3,
+      items: 2,
     },
   };
   const carouselRespRelated = {
@@ -90,7 +90,9 @@ const Details = () => {
         id,
         assets,
       } = getProduct;
+
       setBasePrice(price.raw);
+
       setProduct({
         name,
         src: image.url,
@@ -119,7 +121,7 @@ const Details = () => {
         <Grid item xs={12} sm={6}>
           <Card>
             <CardMedia
-              style={{ width: "100%", height: "50vh", objectFit: "contain" }}
+              style={{ width: "100%", height: "50vh", objectFit: "cover" }}
               image={product?.src}
               component="img"
               alt={product.name}
@@ -203,6 +205,7 @@ const Details = () => {
       </Grid>
 
       <Grid container style={{ marginTop: "3rem" }}>
+      
         {product?.variant_groups?.length > 0 && (
           <Grid item xs={12} md={8}>
             {product?.variant_groups?.map(
@@ -217,7 +220,7 @@ const Details = () => {
                   >
                     Select {vG.name}
                   </Button>
-
+                
                   <Box id="variant">
                     <OwlCarousel
                       className="owl-theme"
@@ -234,6 +237,7 @@ const Details = () => {
                           key={vO.id}
                           onClick={() => updateProduct(vG?.id, vO)}
                         >
+                          {console.log(vO)}
                           <Card style={{ backgroundColor: "inherit" }}>
                             <CardMedia
                               style={{ padding: "2rem", objectFit: "contain" }}
@@ -248,10 +252,18 @@ const Details = () => {
                                 alignItems: "center",
                               }}
                             >
-                              <Typography>
-                                {" "}
-                                + {vO?.price?.formatted_with_symbol}
+                              <div style={{display: "flex", justifyContent: "space-between", minWidth: "100%", maxWidth: "auto" }}>
+                                <Grid item xs={6}>
+                                <Typography>
+                                +{vO?.price?.formatted_with_symbol}
                               </Typography>
+                                </Grid>
+                                <Grid item xs={6}>
+                                <Button variant="contained" color="primary" >
+                                {vO?.name}
+                              </Button>
+                                </Grid>
+                              </div>
                             </CardActions>
                           </Card>
                         </Box>
@@ -265,7 +277,7 @@ const Details = () => {
         )}
         <Grid item xs={12} md={4}>
           <Typography variant="h5" gutterBottom align="center">
-            Related Products
+            Related Food
           </Typography>
           {product?.related_products?.length > 0 ? (
             <Box
@@ -302,7 +314,7 @@ const Details = () => {
               </OwlCarousel>
             </Box>
           ) : (
-            <Typography align="center">No related Product Available</Typography>
+            <Typography align="center">No related food Available</Typography>
           )}
         </Grid>
       </Grid>

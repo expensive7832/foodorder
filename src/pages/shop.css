@@ -1,5 +1,5 @@
 .topNotification{
-    background: linear-gradient(180deg, #008aff,#D5238A );
+    background: linear-gradient(180deg,var(--orange), var(--green));
     height: 20vh;
     text-align: center;
     display: grid;

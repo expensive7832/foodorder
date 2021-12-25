@@ -18,10 +18,10 @@ const Product = ({ product }) => {
   }
 
   return (
-    <article style={{padding: "2rem 1rem"}} key={product.id}>
+    <article style={{padding: "1rem 1rem",minWidth: "50%", width: "auto", height: "auto"}} key={product.id}>
       <Card>
         <CardMedia
-          style={{height: "5rem", objectFit: "contain"}}
+          style={{height: "20vh", width: "100%", objectFit: "cover"}}
           image={product.assets[0].url}
           component="img"
           alt={product.name}

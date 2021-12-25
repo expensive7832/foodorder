@@ -14,15 +14,15 @@ const Footer = () => {
                 <Typography style={{ fontWeight: 'bold', color: '#fff'}} variant='h4'>Our Services</Typography>
                 <List>
                     <ListItem style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start'}}>
-                         <ListItemText>Selling</ListItemText>
-                         <ListItemText>Auction</ListItemText>
+                         <ListItemText style={{ color: '#fff'}}>Selling</ListItemText>
+                         <ListItemText style={{ color: '#fff'}}>Auction</ListItemText>
                     </ListItem>
                 </List>
             </div>
             <div>
                 <Typography style={{ fontWeight: 'bold', color: '#fff'}} variant='h4'>About</Typography>
                 <List>
-                    <Typography>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <Typography style={{ color: '#fff'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Repellat numquam deserunt nostrum distinctio, ut accusamus officiis cupiditate perspiciatis 
                         fugiat porro veniam ratione dolorem! Modi molestiae eligendi, natus vel eveniet commodi.</Typography>
                 </List>

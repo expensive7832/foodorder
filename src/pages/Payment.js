@@ -12,6 +12,7 @@ const Payment = ({ shippingData, backStep, nextStep }) => {
 
   const checkoutRes = useSelector(({ dataReducer }) => dataReducer?.checkout);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const amount = products.subtotal?.formatted_with_symbol
   const amountRaw = products.subtotal?.raw
   const currencyNote = products.currency?.code
@@ -25,9 +26,9 @@ const Payment = ({ shippingData, backStep, nextStep }) => {
  
   useEffect(() => {
     const getCart = async () => {
-      await commerce.checkout
-        .getLive(checkoutRes?.id)
-        .then((res) => setProducts(res));
+     const res = await commerce.checkout.getLive(checkoutRes?.id)
+    setProducts(res);
+    setLoading(false);
     };
     getCart();
     return () => {
@@ -131,14 +132,14 @@ const Payment = ({ shippingData, backStep, nextStep }) => {
   };
   return (
     <div id="payment">
-      <Review products={products}/>
+      <Review products={products} loading={loading}/>
       <Divider />
-     {Review &&
+     
       <div style={{display: 'flex',justifyContent: 'space-between', alignitems: 'center', padding: '1rem 2rem' }}>
       <Button variant='contained' color='secondary' onClick={backStep}>Back</Button>
        <Pay/>
        </div>
-     }
+     
     </div>
   );
 };

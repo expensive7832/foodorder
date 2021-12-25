@@ -21,10 +21,10 @@
 }
 
 #hero .owl-theme{
-    background-color: #0000ff91;
+    background: linear-gradient(to right, var(--lightgray), var(--orange));
     background-blend-mode:saturation;
     height: auto;
-    background-blend-mode:soft-light;
+    background-blend-mode: darken;
 }
 
 #hero .owl-carousel .owl-item img {
@@ -54,4 +54,9 @@
     position: absolute;
     top: 40%;
     left: 0;
+}
+
+.recent{
+    background-color: var(--green);
+    
 }

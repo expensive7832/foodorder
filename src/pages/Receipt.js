@@ -47,7 +47,7 @@ const Receipt = () => {
            }}
          >
            <Typography paragraph>Shop</Typography>
-           <Typography paragraph>eMarket</Typography>
+           <Typography paragraph>OnlineCuisineTreat</Typography>
          </div>
          <div
            style={{
