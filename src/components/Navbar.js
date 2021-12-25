@@ -86,7 +86,7 @@ const {prod_id} = useParams()
                   variant="h5"
                   color="primary"
                 >
-                  eMarket
+                  onlineCuisine
                 </Typography>
               </div>
               
