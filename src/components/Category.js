@@ -12,6 +12,7 @@ const Category = ({ category }) => {
           image={category?.assets[0]?.url}
           component="img"
           alt={category.name}
+          style={{width: "auto", height: "10vh", objectFit: "contain"}}
         />
         <CardContent style={{display: "flex", justifyContent: "space-between", opacity: "0.5"}}>
         <Typography>{category.name}</Typography>
